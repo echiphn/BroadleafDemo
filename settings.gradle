@@ -1,0 +1,8 @@
+rootProject.name = 'ecommerce-website'
+include ':admin'
+include ':core'
+include ':site'
+
+project(':admin').projectDir = "$rootDir/admin" as File
+project(':core').projectDir = "$rootDir/core" as File
+project(':site').projectDir = "$rootDir/site" as File
