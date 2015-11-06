@@ -4,6 +4,7 @@ allprojects  {
   group = 'com.mycompany'
 version = '1.0'
 }
+ext.broadleafVersion='4.0.2-SNAPSHOT'
 
 subprojects {
   apply plugin: 'java'
