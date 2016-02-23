@@ -16,7 +16,7 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
         http://www.springframework.org/schema/aop
-        http://www.springframework.org/schema/aop/spring-aop-4.1.xsd">
+        http://www.springframework.org/schema/aop/spring-aop-4.1.xsd" profile="production">
     
     <!-- The "webDS" data source is the main data source for Broadleaf. It is referenced and
          should be configured via JNDI in your particular environment. For local testing and
@@ -24,7 +24,6 @@
          The other data sources are required as well.  They allow Broadleaf to use different databases
          for secure information such as payment info when in a PCI compliant situation, and/or for CMS
          if you wish to store content in a separate database. -->
-
     <jee:jndi-lookup id="webDS" jndi-name="jdbc/web"/>
 
     <jee:jndi-lookup id="webSecureDS" jndi-name="jdbc/secure"/>

@@ -16,6 +16,7 @@ dependencies {
 	testCompile "org.spockframework:spock-core:$spockVersion"
 	testCompile group: 'junit', name: 'junit', version:'4.12'
 	testCompile group: 'org.springframework', name: 'spring-test', version:"${springVersion}"
+	testCompile "com.h2database:h2:$h2Version"
 	
 	cargo "org.codehaus.cargo:cargo-core-uberjar:$cargoVersion",
 	"org.codehaus.cargo:cargo-ant:$cargoVersion"
@@ -37,7 +38,7 @@ repositories {
 }
 
 cargo {
-	containerId = 'tomcat7x'
+	containerId = 'tomcat8x'
 	port = 8080
 
 	deployable { context = "${contextName}" }
@@ -50,6 +51,13 @@ cargo {
 
 	}
 }
+
+//war{
+//	from(file('src/main/resources')){
+//		include 'site-applicationContext*.xml'
+//		into('WEB-INF')
+//	}
+//}
 
 buildscript{
 	repositories{ jcenter() }

@@ -1,4 +1,3 @@
-build.properties
 target/
 .classpath
 .project
@@ -17,3 +16,4 @@ combined/data/
 combined/solrhome
 *.error
 local-dev
+build/
